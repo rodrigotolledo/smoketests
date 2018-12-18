@@ -1,0 +1,28 @@
+{
+  "name": "wdio-test-framework",
+  "version": "1.0.0",
+  "description": "end to end test framework",
+  "main": "wdio.conf.js",
+  "scripts": {
+    "system-test": "./node_modules/.bin/wdio wdio.conf.js --suite tests --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigotolledo/wdio-test-framework.git"
+  },
+  "author": "Rodrigo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodrigotolledo/wdio-test-framework/issues"
+  },
+  "homepage": "https://github.com/rodrigotolledo/wdio-test-framework#readme",
+  "dependencies": {
+    "wdio-jasmine-framework": "^0.3.8",
+    "wdio-screenshot": "^0.6.0",
+    "wdio-spec-reporter": "^0.1.5",
+    "webdriverio": "^4.14.1"
+  },
+  "devDependencies": {
+    "selenium-standalone": "^6.15.4"
+  }
+}
