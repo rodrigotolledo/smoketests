@@ -1,0 +1,16 @@
+version: '2.1'
+services:
+  system-test-runner:
+    image: amaysim/docker-webdriverio-test-runner:2.1.1
+    volumes:
+      - ./:/tests
+    working_dir: /tests
+    env_file: .env
+    depends_on:
+      - selenium
+
+  selenium:
+    image: selenium/standalone-chrome-debug:latest
+    ports:
+      - 4444 # Selenium server
+      - 5900 # VNC server
