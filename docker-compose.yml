@@ -3,7 +3,7 @@ services:
   system-test-runner:
     image: amaysim/docker-webdriverio-test-runner:2.1.1
     volumes:
-      - ./:/tests
+      - /c/Dev/wdiotestframework:/tests
     working_dir: /tests
     env_file: .env
     depends_on:
