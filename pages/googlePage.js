@@ -8,7 +8,8 @@ class GooglePage extends BasePage {
     }
 
     // Page elements
-    get searchField() { return browser.element('[name="q"]'); }
+    get searchField() { return browser.element('input[name="q"]'); }
+    get searchButton() { return browser.element('input[name="btnK"]'); }
 
     // Actions that you can perform on the page
     loaded() {
@@ -20,6 +21,7 @@ class GooglePage extends BasePage {
         this.searchField.waitForVisible();
         this.searchField.click();
         this.searchField.setValue(toBeSearched);
+        this.searchButton.click();
     }
 }
 

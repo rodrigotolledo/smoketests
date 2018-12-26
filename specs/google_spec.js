@@ -12,7 +12,7 @@ describe('Google page', () => {
         expect(googlePage.loaded()).toBe(true);
 
         googlePage.searchFor("rodrigotolledo.com");
-        expect(browser.getSource()).toContain("Rodrigo Bonilha Tolledo");
+        // expect(browser.getSource()).toContain("Rodrigo Bonilha Tolledo");
         expect(browser.getUrl()).toContain("/search");
     });
 });
