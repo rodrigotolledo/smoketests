@@ -1,6 +1,6 @@
 version: '2.1'
 services:
-  system-test-runner:
+  smoke-test-runner:
     image: amaysim/docker-webdriverio-test-runner:2.1.1
     volumes:
       - $PWD:/tests

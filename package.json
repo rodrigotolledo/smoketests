@@ -1,21 +1,21 @@
 {
-  "name": "wdio-test-framework",
+  "name": "smoketests",
   "version": "1.0.0",
-  "description": "end to end test framework",
+  "description": "simple smoke tests framework",
   "main": "wdio.conf.js",
   "scripts": {
-    "system-test": "./node_modules/.bin/wdio wdio.conf.js --suite tests --verbose"
+    "smoke-test": "./node_modules/.bin/wdio wdio.conf.js --suite tests --verbose"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rodrigotolledo/wdio-test-framework.git"
+    "url": "git+https://github.com/rodrigotolledo/smoketests.git"
   },
   "author": "Rodrigo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rodrigotolledo/wdio-test-framework/issues"
+    "url": "https://github.com/rodrigotolledo/smoketests/issues"
   },
-  "homepage": "https://github.com/rodrigotolledo/wdio-test-framework#readme",
+  "homepage": "https://github.com/rodrigotolledo/smoketests#readme",
   "dependencies": {
     "wdio-jasmine-framework": "^0.3.8",
     "wdio-screenshot": "^0.6.0",

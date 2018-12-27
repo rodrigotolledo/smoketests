@@ -5,20 +5,20 @@ else
 endif
 
 ######################
-# System Tests       #
+# Smoke Tests       #
 ######################
 
-systemTests: $(DOTENV_TARGET) cleanSystemTests
-	docker-compose run --rm system-test-runner npm install
-	docker-compose run --rm system-test-runner npm run system-test
+smokeTests: $(DOTENV_TARGET) cleanSmokeTests
+	docker-compose run --rm smoke-test-runner npm install
+	docker-compose run --rm smoke-test-runner npm run smoke-test
 
-shellSystemTests:
-	docker-compose run --rm system-test-runner /bin/bash
+shellSmokeTests:
+	docker-compose run --rm smoke-test-runner /bin/bash
 
-cleanSystemTests:
+cleanSmokeTests:
 	# docker-compose down
 	rm -fr results/*.xml
 	rm -fr results/*.html
 	rm -fr results/screenshots/*.png
-	docker-compose build --force-rm system-test-runner
+	docker-compose build --force-rm smoke-test-runner
 	
