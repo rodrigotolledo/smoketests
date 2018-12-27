@@ -1,10 +1,6 @@
 # smoketests
 
 ## Getting started
-Install required packages:
-
-`npm install`
-
 Create a `.env` file based on `.env.template` and fill in appropriate values:
 
 `cp .env.template .env`
