@@ -5,10 +5,36 @@ Create a `.env` file based on `.env.template` and fill in appropriate values:
 
 `cp .env.template .env`
 
-## Running tests
+Example:
+```
+SELENIUM_HOST=selenium
+BASE_URL=https://www.google.com
+ENV_TO_TEST=test
+```
+## Running tests (using Docker containers)
 To run tests:
 
 `make smokeTests`
+
+## Running tests (using your local machine with local Chrome)
+Install package dependencies:
+
+`npm install`
+
+Install Selenium (**only needed once!**):
+
+`./node_modules/.bin/selenium-standalone install`
+
+Start up Selenium (on a separate command prompt):
+
+`./node_modules/.bin/selenium-standalone start`
+
+In your `.env` file, set `SELENIUM` variable to `docker.for.win.localhost` or `docker.for.mac.localhost` (depending on what OS you're using)
+
+Run tests:
+
+`make smokeTests`
+
 
 ## Framework structure
 `pages` - where we define element locators (Page Object approach)
